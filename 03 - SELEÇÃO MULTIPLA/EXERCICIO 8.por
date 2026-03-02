@@ -2,38 +2,26 @@ programa
 {
 	funcao inicio()
 	{
-		inteiro valor, maior, menor
-		logico primeiro = verdadeiro
+		real n1, n2, resultado
+		cadeia opcao
 		
-		escreva("Digite valores positivos (negativo para parar): ")
-		leia(valor)
+		opcao = "S"
 		
-		enquanto (valor >= 0)
+		enquanto (opcao == "S" ou opcao == "s")
 		{
-			se (primeiro)
-			{
-				maior = valor
-				menor = valor
-				primeiro = falso
-			}
-			senao
-			{
-				se (valor > maior)
-				{
-					maior = valor
-				}
-				
-				se (valor < menor)
-				{
-					menor = valor
-				}
-			}
+			escreva("Digite o primeiro numero: ")
+			leia(n1)
 			
-			leia(valor)
+			escreva("Digite o segundo numero: ")
+			leia(n2)
+			
+			resultado = n1 + n2
+			
+			escreva("Resultado: ", resultado)
+			
+			escreva("NOVO CALCULO (S/N)? ")
+			leia(opcao)
 		}
-		
-		escreva("Maior valor: " + maior)
-		escreva("  Menor valor: " + menor)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -41,7 +29,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 520; 
+ * @POSICAO-CURSOR = 376; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
